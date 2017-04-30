@@ -1,7 +1,7 @@
-Prerequisites
-  1.Install node.js
-  2.Go to the directory  where this project
-  3.run 'npm install' in Terminal
+Prerequisites </br>
+  1.Install node.js</br>
+  2.Go to the directory  where this project</br>
+  3.run 'npm install' in Terminal</br>
 
 Start server
   1. **Nodejs** <br/>
