@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+header {
+  width: 100%;
+  max-width: 1280px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: #FAFAFA;
+}
+
+header h2 {
+  height: 40px;
+  line-height: 40px;
+  margin-left: 10px;
+  color: #00B38A;
+}
+
+section {
+  width: 99%;
+  max-width: 1280px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+section nav {
+  float: left;
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid #ddd;
+}
+
+section nav .filter {
+  height: 40px;
+  background-color: #EBF0EF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section nav .filter input {
+  height: 30px;
+  width: 95%;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+section nav ul {
+  margin-top: 10px;
+}
+
+section nav li {
+  font-size: 20px;
+  height: 2em;
+  line-height: 2em;
+  cursor: pointer;
+  border-top: 1px solid #ddd;
+  padding-left: 15px;
+}
+section nav li:last-child {
+  border-bottom: 1px solid #ddd;
+}
+section nav li:hover {
+  background-color: #FAFAFA;
+}
+
+section aside {
+  margin-left: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section aside .toolbar {
+  height: 50px;
+  line-height: 50px;
+  background-color: #26a69a;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+
+section aside .toolbar .view-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background: url(img/view.svg) 50% 50% no-repeat;
+  cursor: pointer;
+}
+
+section aside .tabs {
+  height: 40px;
+  background-color: #00bfa5;
+}
+section aside .tabs > span {
+  display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    padding: 0 15px;
+    color: white;
+    border-bottom: 2px solid #00bfa5;
+    cursor: pointer;
+    color: rgb(170,209,249);
+    text-align: center;
+}
+section aside .tabs > span.active {
+  color: white;
+  border-bottom-color: red;
+}
+
+section aside .code-contents {
+  overflow: hidden;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+section aside .code-contents pre {
+  height: 100%;
+  overflow: auto;
+  margin-top: 0;
+  border-left: none !important;
+  padding-left: 10px !important;
+}
+
+section aside iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+}

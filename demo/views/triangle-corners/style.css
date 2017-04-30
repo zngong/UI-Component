@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	width: 300px;
+	height: 500px;
+	margin: 30px auto;
+	position: relative;
+	background-color: #eee;
+}
+
+section .triangle-corner {
+	position: absolute;
+	width: 0;
+	height: 0;
+	cursor: pointer;
+}
+
+section .triangle-corner span {
+	color: white;
+	position: absolute;
+}
+
+/* top-left corner styles */
+section .corner-top-left {
+	border-top: 40px solid gray;
+	border-right: 40px solid transparent;
+	top: 0;
+	left: 0;
+}
+section .corner-top-left span {
+	bottom: 20px;
+	left: 5px;
+}
+
+/* top-right corner styles */
+section .corner-top-right {
+	top: 0;
+	right: 0;
+	border-bottom: 40px solid transparent;
+	border-right: 40px solid gray;
+}
+section .corner-top-right span {
+	top: 2px;
+	left: 20px;
+}
+
+/* bottom-right corner styles */
+section .corner-bottom-right {
+	border-left: 40px solid transparent;
+	border-bottom: 40px solid gray;
+	right: 0;
+	bottom: 0;
+}
+section .corner-bottom-right span {
+	right: 8px;
+	top: 20px;
+}
+
+/* bottom-left corner styles */
+section .corner-bottom-left {
+	left: 0;
+	bottom: 0;
+	border-right: 40px solid transparent;
+	border-bottom: 40px solid gray;
+}
+section .corner-bottom-left span {
+	left: 5px;
+	top: 20px;
+}

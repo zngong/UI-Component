@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/prism.css"/>
+  </head>
+  <body ng-app="demo" ng-controller="DemoController">
+    <header>
+      <h2>Font-end UI Accessories</h2>
+    </header>
+    <section class="clearfix">
+      <nav>
+        <div class="filter">
+            <input type="input" ng-model="query" placeholder="input keyword to filter"/>
+        </div>
+        <ul>
+          <li ng-repeat="item in demoList | filter:query" ng-click="viewDemo(item)" ng-bind="item"></li>
+        </ul>
+      </nav>
+      <aside>
+        <div class="toolbar">
+          <span>Demo Instance</span>
+          <div class="view-btn" ng-click="toggleCodeViewer()" title="source code"></div>
+        </div>
+        <div class="code-viewer">
+          <div class="tabs" ng-show="codeViewing">
+            <span class="html" ng-class="{active: currentTab===0}" ng-click="switchTab(0)" ng-show="htmlCode">HTML</span>
+            <span class="js" ng-class="{active: currentTab===1}" ng-click="switchTab(1)" ng-show="jsCode">JS</span>
+            <span class="css" ng-class="{active: currentTab===2}" ng-click="switchTab(2)" ng-show="cssCode">CSS</span>
+          </div>
+          <div class="code-contents" ng-show="codeViewing">
+            <pre class="language-html" ng-show="htmlCode&&currentTab===0" ng-bind="htmlCode"></pre>
+            <pre class="language-javascript" ng-show="jsCode&&currentTab===1" ng-bind="jsCode"></pre>
+            <pre class="language-css" ng-show="cssCode&&currentTab===2" ng-bind="cssCode"></pre>
+          </div>
+        </div>
+        <iframe ng-src="{{currentUrl}}" ng-hide="codeViewing"></iframe>
+      </aside>
+    </section>
+    <footer></footer>
+
+    <script type="text/javascript" src="lib/prism.js"></script>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

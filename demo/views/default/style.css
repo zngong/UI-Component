@@ -1,0 +1,58 @@
+/* the CSS source code */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.pop {
+  min-width: 200px;
+  min-height: 40px;
+  background-color: #e3e3e3;
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+}
+.pop .description {
+  font-size: 16px;
+
+  height: 40px;
+  line-height: 40px;
+}
+
+.arrow-top:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #e3e3e3;
+  position: absolute;
+  top: -20px;
+  right: 15px;
+}
+
+.arrow-left:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right: 10px solid #e3e3e3;
+  position: absolute;
+  top: 20px;
+  left: -20px;
+}
+
+#tips-left {
+  position: absolute;
+  top: 100px;
+  left: 15px;
+}
+
+#tips-top {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+}
+
+#tips-top .description {
+  text-align: right;
+}

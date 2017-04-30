@@ -1,0 +1,16 @@
+{
+  "name": "ui-spark-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "live-server": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "server": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
