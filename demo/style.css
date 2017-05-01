@@ -79,7 +79,7 @@ section nav li:last-child {
   border-bottom: 1px solid #ddd;
 }
 section nav li:hover {
-  background-color: #FAFAFA;
+  background-color: #26a69a;
 }
 
 section aside {
@@ -147,4 +147,7 @@ section aside iframe {
   width: 100%;
   height: auto;
   border: none;
+}
+section nav .menuColor {
+  background: #26a69a;
 }

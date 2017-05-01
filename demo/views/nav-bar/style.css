@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #F8F8F8;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.header-title {
+    font-size: 20px;
+}
+
+.header-title, .nav {
+    float: left;
+}
+
+.nav li {
+    list-style: none;
+    float: left;
+}
+
+.nav li:hover, .nav li.selected {
+    background-color: #eeeeee;
+    color:#c92c2c;
+}
+
+.nav a {
+    padding: 0 15px;
+    display: block;
+    cursor: pointer;
+}
+
+.sections {
+    margin-top: 50px;
+    height: 500px;
+}
+
+.section {
+    height: 100%;
+    padding: 10px;
+    background-color: #EEEEEE;
+}
+
+.sectionSelected {
+    display: none;
+}

@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded',function () {
     for(var i = 0;i<lis.length;i++) {
         var li = lis[i];
         li.onclick = function () {
-            // console.log(this)
             var liId = this.getAttribute('id');
             for(var j = 0;j<lis.length;j++){
                 lis[j].classList.remove('selected');
@@ -23,8 +22,8 @@ window.addEventListener('DOMContentLoaded',function () {
             this.className = 'selected';
         }
     }
-
-
-
-
-})
+});
+window.onresize = function(){
+    var height =  document.documentElement.clientHeight;
+    console.log(height)
+}

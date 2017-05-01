@@ -3,8 +3,18 @@ angular.module('demo', ['ngRoute']).controller('DemoController',
 
   $scope.demoList = window.demoList;//demo集合
 /*@name:demo名称，也包括对应的文件夹名称*/
-  $scope.viewDemo = function(name) {
-      $location.path(name);//改变根路径
+  $scope.viewDemo = function(name,index) {
+    var menus= document.querySelectorAll('.menuList li');
+   
+    for(var i = 0 ; i<menus.length;i++){
+      if(i == index){
+        menus[i].className = 'menuColor';
+      }else{
+        menus[i].className = '';
+      }
+    }
+    // this.className = 'menuColor';
+    $location.path(name);//改变根路径
     var demoFolder = 'views/';
     var htmlPath = demoFolder + name + '/index.html';
     var jsPath = demoFolder + name + '/script.js';

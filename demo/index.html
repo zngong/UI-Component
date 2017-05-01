@@ -12,8 +12,8 @@
         <div class="filter">
             <input type="input" ng-model="query" placeholder="input keyword to filter"/>
         </div>
-        <ul>
-          <li ng-repeat="item in demoList | filter:query" ng-click="viewDemo(item)" ng-bind="item"></li>
+        <ul class="menuList">
+          <li ng-repeat="item in demoList | filter:query" ng-click="viewDemo(item,$index)" ng-bind="item"></li>
         </ul>
       </nav>
       <aside>
