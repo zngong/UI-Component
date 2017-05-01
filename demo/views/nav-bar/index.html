@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Scroll Nav</title>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header>
+    <ul class="nav">
+        <li id="first-nav" data-section="first-section" class="selected">
+            <a>First</a>
+        </li>
+        <li id="second-nav" data-section="second-section">
+            <a>Second</a>
+        </li>
+        <li id="third-nav" data-section="third-section">
+            <a>Third</a>
+        </li>
+        <li id="fourth-nav" data-section="fourth-section">
+            <a>Fourth</a>
+        </li>
+    </ul>
+</header>
+
+<div class="sections">
+    <section id="first-section" class="section" data-nav="first-nav">First Section</section>
+    <section id="second-section" class="section sectionSelected"  data-nav="second-nav">Second Section</section>
+    <section id="third-section" class="section sectionSelected" data-nav="third-nav">Third Section</section>
+    <section id="fourth-section" class="section sectionSelected" data-nav="fourth-nav">Fourth Section</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

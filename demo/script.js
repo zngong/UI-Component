@@ -1,10 +1,10 @@
-angular.module('demo', ['ngRoute']).controller('DemoController', function($scope, $location, codeService) {
+angular.module('demo', ['ngRoute']).controller('DemoController',
+    function($scope, $location, codeService) {
 
-  $scope.demoList = window.demoList;
-
+  $scope.demoList = window.demoList;//demo集合
+/*@name:demo名称，也包括对应的文件夹名称*/
   $scope.viewDemo = function(name) {
-    if (name !== 'default') $location.path(name);
-
+      $location.path(name);//改变根路径
     var demoFolder = 'views/';
     var htmlPath = demoFolder + name + '/index.html';
     var jsPath = demoFolder + name + '/script.js';
@@ -13,6 +13,7 @@ angular.module('demo', ['ngRoute']).controller('DemoController', function($scope
     $scope.codeViewing = false;
 
     $scope.currentUrl = htmlPath;
+    /*currentTab == 0 (html),currentTab == 1 (js),currentTab == 2(css)*/
     $scope.currentTab = 0;
 
     $scope.htmlCode = undefined;
@@ -28,20 +29,17 @@ angular.module('demo', ['ngRoute']).controller('DemoController', function($scope
       }, 300);
     };
 
-    codeService.getCode(htmlPath)
-      .then(function(result) {
+    codeService.getCode(htmlPath).then(function(result) {
         $scope.htmlCode = result.data;
         return codeService.getCode(jsPath);
       }, function() {
         return codeService.getCode(jsPath);
-      })
-      .then(function(result) {
+      }).then(function(result) {
         $scope.jsCode = result.data;
         return codeService.getCode(cssPath);
       }, function() {
         return codeService.getCode(cssPath);
-      })
-      .then(function(result) {
+      }).then(function(result) {
         $scope.cssCode = result.data;
         renderCode();
       }, function() {
@@ -62,7 +60,7 @@ angular.module('demo', ['ngRoute']).controller('DemoController', function($scope
     $scope.viewDemo(name);
   } else {
     $location.path('/');
-    $scope.viewDemo('default');
+    $scope.viewDemo('dialog');
   }
 
 }).factory('codeService', function($http) {

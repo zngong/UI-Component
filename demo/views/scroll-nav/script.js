@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
 
         window.scroller = setInterval(function() {
           window.scrollBy(0, eachRange);
+          console.log("===eachRange===",eachRange)
           step--;
           if (step === 0) {
             clearInterval(window.scroller);
