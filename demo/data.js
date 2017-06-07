@@ -4,5 +4,6 @@ window.demoList = [
   'scroll-nav',
     'nav-bar',
   'popups',
-  'triangle-corners'
+  'triangle-corners',
+   'carousel'
 ];
